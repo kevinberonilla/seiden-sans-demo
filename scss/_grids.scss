@@ -4,16 +4,17 @@
 }
 .row {
     @extend .clearfix;
-    margin-left: -#{$grid-spacing};
-    margin-right: -#{$grid-spacing};
+    &.negate-padding {
+        margin-left: -#{$grid-spacing};
+        margin-right: -#{$grid-spacing};
+    }
 }
 .column {
     display: block;
     width: 100%;
     float: left;
-    padding: $grid-spacing;
-    &.no-padding {
-        padding: 0;
+    &.padded {
+        padding: $grid-spacing;
     }
     @each $column in $column-list {
         &.#{nth($column, 1)} {
@@ -36,14 +37,21 @@
 .flex-row {
     display: flex;
     flex-wrap: wrap;
+    &.negate-padding {
+        margin-left: -#{$grid-spacing};
+        margin-right: -#{$grid-spacing};
+    }
     &.no-wrap {
         flex-wrap: nowrap;
     }
     > * {
-        flex: 1 1 0;
+        flex: 1 1 auto;
     }
 }
 .flex-column {
+    &.padded {
+        padding: $grid-spacing;
+    }
     @each $column in $column-list {
         &.#{nth($column, 1)} {
             flex-grow: 0;
