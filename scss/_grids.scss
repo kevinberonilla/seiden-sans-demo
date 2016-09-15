@@ -1,12 +1,7 @@
 .grid {
-    margin-top: -#{$grid-spacing};
-    margin-bottom: -#{$grid-spacing};
-}
-.row {
     @extend .clearfix;
     &.negate-padding {
-        margin-left: -#{$grid-spacing};
-        margin-right: -#{$grid-spacing};
+        margin: -#{$grid-spacing};
     }
 }
 .column {
@@ -34,12 +29,11 @@
         }
     }
 }
-.flex-row {
+.flex-grid {
     display: flex;
     flex-wrap: wrap;
     &.negate-padding {
-        margin-left: -#{$grid-spacing};
-        margin-right: -#{$grid-spacing};
+        margin: -#{$grid-spacing};
     }
     &.no-wrap {
         flex-wrap: nowrap;

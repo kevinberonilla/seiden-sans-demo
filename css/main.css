@@ -4,13 +4,8 @@ Sass Modules
 /* ----------------------------------------
 Grid Styles
 ---------------------------------------- */
-.grid {
-  margin-top: -8px;
-  margin-bottom: -8px; }
-
-.row.negate-padding {
-  margin-left: -8px;
-  margin-right: -8px; }
+.grid.negate-padding {
+  margin: -8px; }
 
 .column {
   display: block;
@@ -112,7 +107,7 @@ Grid Styles
       margin-left: initial;
       margin-right: 100%; }
 
-.flex-row {
+.flex-grid {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -120,14 +115,13 @@ Grid Styles
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-  .flex-row.negate-padding {
-    margin-left: -8px;
-    margin-right: -8px; }
-  .flex-row.no-wrap {
+  .flex-grid.negate-padding {
+    margin: -8px; }
+  .flex-grid.no-wrap {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
-  .flex-row > *, .flex-row > *:before, .flex-row > *:after {
+  .flex-grid > *, .flex-grid > *:before, .flex-grid > *:after {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
@@ -905,7 +899,7 @@ img {
       width: 100%;
       padding: 0 30px; } }
 
-.clearfix:after, .row:after {
+.clearfix:after, .grid:after {
   content: '';
   display: table;
   clear: both; }
