@@ -3,21 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
     <title>Seiden Sans</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/seiden-sans.css">
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
 
 <body>
     <header>
         <a id="kb-logo" href="http://www.kevinberonilla.com" target="_blank"><img src="http://www.kevinberonilla.com/hosted/kb-logo-reversed.svg"></a>
-
-        <nav>
-            <h1>Seiden Sans</h1>
-            <a href="https://github.com/kevinberonilla/seiden-sans" class="button" target="_blank">GitHub</a>
-            <a href="https://github.com/kevinberonilla/seiden-sans/archive/master.zip" class="button" download="seiden-sans.zip">Download</a>
-        </nav>
     </header>
+    <div id="hero">
+        <div class="container vertical-align">
+            <div class="flex-grid negate-padding">
+                <div class="flex-column padded span-7 span-8-tl">
+                    <textarea name="" id="user-text">The quick brown fox jumps over the lazy dog.</textarea>
+                    <h4>set in Seiden Sans</h4>
+                </div>
+                <div class="flex-column padded span-5 span-8-tl adjust-pos-r">
+                    <div class="button-container">
+                        <a href="" class="button primary"><span class="fa fa-download adjust-m-r-10"></span> Download</a>
+                        <a href="" class="button negative inverse"><span class="fa fa-github adjust-m-r-10"></span> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-chevron">
+            <span class="adjust-d-ib adjust-m-b-16">Learn more</span>
+            <br>
+            <span class="fa fa-chevron-down"></span>
+        </a>
+    </div>
+    <section id="about">
+        <div class="container">About</div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
