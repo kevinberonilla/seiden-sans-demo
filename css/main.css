@@ -1069,6 +1069,25 @@ header {
   background: #2d2d2d;
   color: white;
   padding: 60px 0; }
+  #about .character-set {
+    font-size: 38px;
+    line-height: 42px; }
+    #about .character-set p {
+      margin-top: 16px;
+      word-break: break-all; }
+  #about .stat {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid white; }
+    #about .stat .number {
+      font-size: 52px;
+      line-height: 60px;
+      display: block;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid white; }
+  #about .description {
+    padding-left: 40px; }
 
 /* ----------------------------------------
 Adjustment Styles
