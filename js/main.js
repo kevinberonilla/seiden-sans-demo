@@ -4,8 +4,8 @@ $(document).ready(function() {
     /* ----------------------------------------
     Shared Variables
     ---------------------------------------- */
-    var documentBody = $(document.body),
-        window = $(window),
+    var bodyObj = $(document.body),
+        windowObj = $(window),
         view = $('html, body');
     
     /* ----------------------------------------
@@ -15,7 +15,7 @@ $(document).ready(function() {
     
     if (typeof(documentFonts) !== 'undefined') {
         documentFonts.ready.then(function() {
-            documentBody.addClass('fonts-loaded');
+            bodyObj.addClass('fonts-loaded');
         });
     }
     
@@ -33,8 +33,9 @@ $(document).ready(function() {
         userText.innerHeight(contentHeight);
     }
     
+    autoResize();
     userText.keyup(autoResize);
-    window.resize(autoResize);
+    windowObj.resize(autoResize);
     
     userText.focus()
         .text(defaultVal);
@@ -51,6 +52,6 @@ $(document).ready(function() {
         
         view.animate({
             scrollTop: targetPos
-        }, 1000);
+        }, 750);
     });
 });

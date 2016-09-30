@@ -9,6 +9,46 @@
         transform: translateY(0);
     }
 }
+@keyframes grow-1 {
+    0% {
+        transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    }
+    100% {
+        transform: scale(2) rotateZ(33deg) translateX(-15%) translateY(-10%);
+    }
+}
+@keyframes grow-2 {
+    0% {
+        transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    }
+    100% {
+        transform: scale(0.25) rotateZ(5deg) translateX(-8%) translateY(20%);
+    }
+}
+@keyframes grow-3 {
+    0% {
+        transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    }
+    100% {
+        transform: scale(1.5) rotateZ(12deg) translateX(20%) translateY(5%);
+    }
+}
+@keyframes grow-4 {
+    0% {
+        transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    }
+    100% {
+        transform: scale(0.75) rotateZ(45deg) translateX(10%) translateY(-2%);
+    }
+}
+@keyframes grow-5 {
+    0% {
+        transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    }
+    100% {
+        transform: scale(0.1) rotateZ(-30deg) translateX(-40%) translateY(8%);
+    }
+}
 body {
     color: $text-color;
     &.fonts-loaded {
@@ -38,28 +78,31 @@ a:visited {
     border: 1px solid transparent;
     font-size: 18px;
     font-family: $font-stack;
+    &:first-child {
+        margin-left: 0;
+    }
     &.primary {
-        background-color: $button-primary;
+        background-color: $color-primary;
         &.inverse {
             background-color: transparent;
-            border-color: $button-primary;
-            color: $button-primary;
+            border-color: $color-primary;
+            color: $color-primary;
         }
     }
     &.secondary {
-        background-color: $button-secondary;
+        background-color: $color-secondary;
         &.inverse {
             background-color: transparent;
-            border-color: $button-secondary;
-            color: $button-secondary;
+            border-color: $color-secondary;
+            color: $color-secondary;
         }
     }
     &.negative {
-        background-color: $button-negative;
+        background-color: $color-negative;
         &.inverse {
             background-color: transparent;
-            border-color: $button-negative;
-            color: $button-negative;
+            border-color: $color-negative;
+            color: $color-negative;
         }
     }
 }
@@ -93,14 +136,13 @@ header {
         outline: none;
     }
 }
-#hero {
-    background-color: $hero-background;
+#main {
+    background-color: $main-background;
     position: relative;
     z-index: 1;
     height: 100vh;
     overflow: hidden;
-    &:before {
-        content: 'good typography';
+    .background {
         font-family: $font-stack;
         color: white;
         display: block;
@@ -113,6 +155,31 @@ header {
         opacity: 0.08;
         text-align: right;
         letter-spacing: -2vw;
+        ::selection {
+            background: transparent;
+        }
+        ::-moz-selection {
+            background: transparent;
+        }
+        > span {
+            display: inline-block;
+            pointer-events: none;
+            &:nth-child(1n + 1) {
+                animation: grow-1 75000ms infinite alternate;
+            }
+            &:nth-child(2n + 1) {
+                animation: grow-2 75000ms infinite alternate;
+            }
+            &:nth-child(3n + 1) {
+                animation: grow-3 75000ms infinite alternate;
+            }
+            &:nth-child(4n + 1) {
+                animation: grow-4 75000ms infinite alternate;
+            }
+            &:nth-child(5n + 1) {
+                animation: grow-5 75000ms infinite alternate;
+            }
+        }
     }
     #user-text {
         font-family: $font-stack;
@@ -120,15 +187,20 @@ header {
         background: transparent;
         display: block;
         font-size: 52px;
-        line-height: 58px;
+        line-height: 68px;
         border-bottom: 1px solid $text-color;
         padding: 20px 0;
         margin-bottom: 20px;
         width: 100%;
+        height: 245px; // Default
         resize: none;
         overflow: hidden;
         color: $text-color;
         -ms-overflow-style: none;
+        @media only screen and (max-width: $phone-breakpoint) {
+            font-size: 36px;
+            line-height: 50px;
+        }
         &:focus {
             outline: none;
         }
@@ -143,6 +215,13 @@ header {
         right: 0;
         text-align: right;
         white-space: nowrap;
+        @media only screen and (max-width: $tablet-landscape-breakpoint) {
+            position: relative;
+            bottom: initial;
+            right: initial;
+            margin-top: 16px;
+            text-align: left;
+        }
     }
     .scroll-chevron {
         position: absolute;
@@ -160,12 +239,38 @@ header {
     background: $about-background;
     color: white;
     padding: 60px 0;
+    a, a:visited {
+        &:not(.button) {
+            color: $color-secondary;
+            text-decoration: underline;
+        }
+    }
+    h2 {
+        font-size: 22px;
+        color: $color-primary;
+    }
     .character-set {
         font-size: 38px;
+        letter-spacing: 3px;
         line-height: 42px;
+        text-align: right;
+        @media only screen and (max-width: $tablet-landscape-breakpoint) {
+            font-size: 32px;
+            line-height: 36px;
+            text-align: left;
+            margin-bottom: 42px;
+        }
         p {
             margin-top: 16px;
             word-break: break-all;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        br {
+            @media only screen and (max-width: $tablet-portrait-breakpoint) {
+                display: none;
+            }
         }
     }
     .stat {

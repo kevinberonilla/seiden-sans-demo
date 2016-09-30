@@ -865,7 +865,7 @@ body {
   -webkit-text-size-adjust: 100%;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
-  line-height: 24px; }
+  line-height: 28px; }
   body.disable-scroll {
     overflow-y: hidden;
     -webkit-overflow-scrolling: none; }
@@ -931,6 +931,86 @@ Project Styles
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
 
+@-webkit-keyframes grow-1 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
+  100% {
+    -webkit-transform: scale(2) rotateZ(33deg) translateX(-15%) translateY(-10%);
+    transform: scale(2) rotateZ(33deg) translateX(-15%) translateY(-10%); } }
+
+@keyframes grow-1 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
+  100% {
+    -webkit-transform: scale(2) rotateZ(33deg) translateX(-15%) translateY(-10%);
+    transform: scale(2) rotateZ(33deg) translateX(-15%) translateY(-10%); } }
+
+@-webkit-keyframes grow-2 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
+  100% {
+    -webkit-transform: scale(0.25) rotateZ(5deg) translateX(-8%) translateY(20%);
+    transform: scale(0.25) rotateZ(5deg) translateX(-8%) translateY(20%); } }
+
+@keyframes grow-2 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
+  100% {
+    -webkit-transform: scale(0.25) rotateZ(5deg) translateX(-8%) translateY(20%);
+    transform: scale(0.25) rotateZ(5deg) translateX(-8%) translateY(20%); } }
+
+@-webkit-keyframes grow-3 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
+  100% {
+    -webkit-transform: scale(1.5) rotateZ(12deg) translateX(20%) translateY(5%);
+    transform: scale(1.5) rotateZ(12deg) translateX(20%) translateY(5%); } }
+
+@keyframes grow-3 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
+  100% {
+    -webkit-transform: scale(1.5) rotateZ(12deg) translateX(20%) translateY(5%);
+    transform: scale(1.5) rotateZ(12deg) translateX(20%) translateY(5%); } }
+
+@-webkit-keyframes grow-4 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
+  100% {
+    -webkit-transform: scale(0.75) rotateZ(45deg) translateX(10%) translateY(-2%);
+    transform: scale(0.75) rotateZ(45deg) translateX(10%) translateY(-2%); } }
+
+@keyframes grow-4 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
+  100% {
+    -webkit-transform: scale(0.75) rotateZ(45deg) translateX(10%) translateY(-2%);
+    transform: scale(0.75) rotateZ(45deg) translateX(10%) translateY(-2%); } }
+
+@-webkit-keyframes grow-5 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
+  100% {
+    -webkit-transform: scale(0.1) rotateZ(-30deg) translateX(-40%) translateY(8%);
+    transform: scale(0.1) rotateZ(-30deg) translateX(-40%) translateY(8%); } }
+
+@keyframes grow-5 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
+  100% {
+    -webkit-transform: scale(0.1) rotateZ(-30deg) translateX(-40%) translateY(8%);
+    transform: scale(0.1) rotateZ(-30deg) translateX(-40%) translateY(8%); } }
+
 body {
   color: white; }
   body.fonts-loaded {
@@ -960,6 +1040,8 @@ a:visited {
   border: 1px solid transparent;
   font-size: 18px;
   font-family: "Seiden Sans", sans-serif; }
+  .button:first-child {
+    margin-left: 0; }
   .button.primary {
     background-color: #ef6748; }
     .button.primary.inverse {
@@ -1006,14 +1088,13 @@ header {
   header #kb-logo:focus {
     outline: none; }
 
-#hero {
+#main {
   background-color: #00cca5;
   position: relative;
   z-index: 1;
   height: 100vh;
   overflow: hidden; }
-  #hero:before {
-    content: 'good typography';
+  #main .background {
     font-family: "Seiden Sans", sans-serif;
     color: white;
     display: block;
@@ -1026,33 +1107,69 @@ header {
     opacity: 0.08;
     text-align: right;
     letter-spacing: -2vw; }
-  #hero #user-text {
+    #main .background ::-moz-selection {
+      background: transparent; }
+    #main .background ::selection {
+      background: transparent; }
+    #main .background ::-moz-selection {
+      background: transparent; }
+    #main .background > span {
+      display: inline-block;
+      pointer-events: none; }
+      #main .background > span:nth-child(1n + 1) {
+        -webkit-animation: grow-1 75000ms infinite alternate;
+        animation: grow-1 75000ms infinite alternate; }
+      #main .background > span:nth-child(2n + 1) {
+        -webkit-animation: grow-2 75000ms infinite alternate;
+        animation: grow-2 75000ms infinite alternate; }
+      #main .background > span:nth-child(3n + 1) {
+        -webkit-animation: grow-3 75000ms infinite alternate;
+        animation: grow-3 75000ms infinite alternate; }
+      #main .background > span:nth-child(4n + 1) {
+        -webkit-animation: grow-4 75000ms infinite alternate;
+        animation: grow-4 75000ms infinite alternate; }
+      #main .background > span:nth-child(5n + 1) {
+        -webkit-animation: grow-5 75000ms infinite alternate;
+        animation: grow-5 75000ms infinite alternate; }
+  #main #user-text {
     font-family: "Seiden Sans", sans-serif;
     border: none;
     background: transparent;
     display: block;
     font-size: 52px;
-    line-height: 58px;
+    line-height: 68px;
     border-bottom: 1px solid white;
     padding: 20px 0;
     margin-bottom: 20px;
     width: 100%;
+    height: 245px;
     resize: none;
     overflow: hidden;
     color: white;
     -ms-overflow-style: none; }
-    #hero #user-text:focus {
+    @media only screen and (max-width: 480px) {
+      #main #user-text {
+        font-size: 36px;
+        line-height: 50px; } }
+    #main #user-text:focus {
       outline: none; }
-  #hero .subtitle {
+  #main .subtitle {
     font-size: 18px;
     line-height: 30px; }
-  #hero .button-container {
+  #main .button-container {
     position: absolute;
     bottom: 30px;
     right: 0;
     text-align: right;
     white-space: nowrap; }
-  #hero .scroll-chevron {
+    @media only screen and (max-width: 1140px) {
+      #main .button-container {
+        position: relative;
+        bottom: initial;
+        right: initial;
+        margin-top: 16px;
+        text-align: left; } }
+  #main .scroll-chevron {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -1060,7 +1177,7 @@ header {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     text-align: center; }
-    #hero .scroll-chevron .fa {
+    #main .scroll-chevron .fa {
       -webkit-animation: bounce 2000ms infinite;
       animation: bounce 2000ms infinite; }
 
@@ -1069,12 +1186,31 @@ header {
   background: #2d2d2d;
   color: white;
   padding: 60px 0; }
+  #about a:not(.button), #about a:visited:not(.button) {
+    color: #00cca5;
+    text-decoration: underline; }
+  #about h2 {
+    font-size: 22px;
+    color: #ef6748; }
   #about .character-set {
     font-size: 38px;
-    line-height: 42px; }
+    letter-spacing: 3px;
+    line-height: 42px;
+    text-align: right; }
+    @media only screen and (max-width: 1140px) {
+      #about .character-set {
+        font-size: 32px;
+        line-height: 36px;
+        text-align: left;
+        margin-bottom: 42px; } }
     #about .character-set p {
       margin-top: 16px;
       word-break: break-all; }
+      #about .character-set p:first-child {
+        margin-top: 0; }
+    @media only screen and (max-width: 768px) {
+      #about .character-set br {
+        display: none; } }
   #about .stat {
     padding: 10px;
     text-align: center;
