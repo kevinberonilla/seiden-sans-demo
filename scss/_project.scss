@@ -253,6 +253,7 @@ header {
         letter-spacing: 3px;
         line-height: 42px;
         text-align: right;
+        font-family: $font-stack;
         @media only screen and (max-width: $tablet-landscape-breakpoint) {
             font-size: 32px;
             line-height: 36px;
