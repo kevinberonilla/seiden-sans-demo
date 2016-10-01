@@ -931,22 +931,6 @@ Project Styles
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
 
-@-webkit-keyframes grow-1 {
-  0% {
-    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
-    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
-  100% {
-    -webkit-transform: scale(2) rotateZ(33deg) translateX(-15%) translateY(-10%);
-    transform: scale(2) rotateZ(33deg) translateX(-15%) translateY(-10%); } }
-
-@keyframes grow-1 {
-  0% {
-    -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
-    transform: scale(1) rotateZ(0deg) translateX(0) translateY(0); }
-  100% {
-    -webkit-transform: scale(2) rotateZ(33deg) translateX(-15%) translateY(-10%);
-    transform: scale(2) rotateZ(33deg) translateX(-15%) translateY(-10%); } }
-
 @-webkit-keyframes grow-2 {
   0% {
     -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
@@ -1064,11 +1048,11 @@ a:visited {
 header {
   position: fixed;
   top: 0;
-  z-index: 9990;
+  z-index: 9999;
   width: 100%;
   height: 110px;
   background-color: transparent;
-  pointer-events: noen; }
+  pointer-events: none; }
   header #kb-logo {
     position: absolute;
     top: 30px;
@@ -1092,8 +1076,7 @@ header {
   background-color: #00cca5;
   position: relative;
   z-index: 1;
-  height: 100vh;
-  overflow: hidden; }
+  height: 100vh; }
   #main .background {
     font-family: "Seiden Sans", sans-serif;
     color: white;
@@ -1116,9 +1099,6 @@ header {
     #main .background > span {
       display: inline-block;
       pointer-events: none; }
-      #main .background > span:nth-child(1n + 1) {
-        -webkit-animation: grow-1 75000ms infinite alternate;
-        animation: grow-1 75000ms infinite alternate; }
       #main .background > span:nth-child(2n + 1) {
         -webkit-animation: grow-2 75000ms infinite alternate;
         animation: grow-2 75000ms infinite alternate; }
@@ -1147,6 +1127,10 @@ header {
     overflow: hidden;
     color: white;
     -ms-overflow-style: none; }
+    @media only screen and (max-width: 768px) {
+      #main #user-text {
+        font-size: 46px;
+        line-height: 60px; } }
     @media only screen and (max-width: 480px) {
       #main #user-text {
         font-size: 36px;
@@ -1182,10 +1166,17 @@ header {
       animation: bounce 2000ms infinite; }
 
 #about {
-  height: 100vh;
   background: #2d2d2d;
   color: white;
-  padding: 60px 0; }
+  padding: 200px 0;
+  position: relative;
+  z-index: 9996; }
+  @media only screen and (max-width: 768px) {
+    #about {
+      padding: 160px 0; } }
+  @media only screen and (max-width: 480px) {
+    #about {
+      padding: 80px 0; } }
   #about a:not(.button), #about a:visited:not(.button) {
     color: #00cca5;
     text-decoration: underline; }

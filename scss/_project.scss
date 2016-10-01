@@ -9,14 +9,6 @@
         transform: translateY(0);
     }
 }
-@keyframes grow-1 {
-    0% {
-        transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
-    }
-    100% {
-        transform: scale(2) rotateZ(33deg) translateX(-15%) translateY(-10%);
-    }
-}
 @keyframes grow-2 {
     0% {
         transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
@@ -109,11 +101,11 @@ a:visited {
 header {
     position: fixed;
     top: 0;
-    z-index: 9990;
+    z-index: 9999;
     width: 100%;
     height: 110px;
     background-color: $header-background;
-    pointer-events: noen;
+    pointer-events: none;
     #kb-logo {
         position: absolute;
         top: 30px;
@@ -141,7 +133,6 @@ header {
     position: relative;
     z-index: 1;
     height: 100vh;
-    overflow: hidden;
     .background {
         font-family: $font-stack;
         color: white;
@@ -164,9 +155,6 @@ header {
         > span {
             display: inline-block;
             pointer-events: none;
-            &:nth-child(1n + 1) {
-                animation: grow-1 75000ms infinite alternate;
-            }
             &:nth-child(2n + 1) {
                 animation: grow-2 75000ms infinite alternate;
             }
@@ -197,6 +185,10 @@ header {
         overflow: hidden;
         color: $text-color;
         -ms-overflow-style: none;
+        @media only screen and (max-width: $tablet-portrait-breakpoint) {
+            font-size: 46px;
+            line-height: 60px;
+        }
         @media only screen and (max-width: $phone-breakpoint) {
             font-size: 36px;
             line-height: 50px;
@@ -235,10 +227,17 @@ header {
     }
 }
 #about {
-    height: 100vh;
     background: $about-background;
     color: white;
-    padding: 60px 0;
+    padding: 200px 0;
+    position: relative;
+    z-index: 9996;
+    @media only screen and (max-width: $tablet-portrait-breakpoint) {
+        padding: 160px 0;
+    }
+    @media only screen and (max-width: $phone-breakpoint) {
+        padding: 80px 0;
+    }
     a, a:visited {
         &:not(.button) {
             color: $color-secondary;
