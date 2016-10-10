@@ -146,6 +146,7 @@ header {
         opacity: 0.08;
         text-align: right;
         letter-spacing: -2vw;
+        overflow: hidden;
         ::selection {
             background: transparent;
         }
