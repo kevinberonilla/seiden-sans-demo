@@ -1,5 +1,5 @@
 {
-  "name": "webegin",
+  "name": "seiden-sans-demo",
   "version": "1.0.0",
   "description": "A bare-bones web development starting point.",
   "main": "gulpfile.js",
@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://kevinberonilla@github.com/kevinberonilla/webegin.git"
+    "url": "git+https://kevinberonilla@github.com/kevinberonilla/seiden-sans-demo.git"
   },
   "author": "Kevin Beronilla <kevin.beronilla@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kevinberonilla/webegin/issues"
+    "url": "https://github.com/kevinberonilla/seiden-sans-demo/issues"
   },
-  "homepage": "https://github.com/kevinberonilla/webegin#readme"
+  "homepage": "https://github.com/kevinberonilla/seiden-sans-demo#readme"
 }
