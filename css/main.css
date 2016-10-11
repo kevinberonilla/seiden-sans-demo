@@ -859,8 +859,8 @@ html, body {
   height: 100%; }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;*/
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -1135,8 +1135,8 @@ header {
         line-height: 60px; } }
     @media only screen and (max-width: 480px) {
       #main #user-text {
-        font-size: 36px;
-        line-height: 50px; } }
+        font-size: 32px;
+        line-height: 46px; } }
     #main #user-text:focus {
       outline: none; }
   #main .subtitle {
