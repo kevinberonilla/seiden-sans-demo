@@ -1014,7 +1014,7 @@ a:visited {
   display: inline-block;
   margin-left: 10px;
   max-width: initial;
-  padding: 12px 16px 10px;
+  padding: 12px 16px 8px;
   margin-top: 0;
   background-color: transparent;
   font-weight: 300;
@@ -1024,6 +1024,10 @@ a:visited {
   border: 1px solid transparent;
   font-size: 18px;
   font-family: "Seiden Sans", sans-serif; }
+  @media only screen and (max-width: 480px) {
+    .button {
+      padding: 8px 12px 4px;
+      font-size: 16px; } }
   .button:first-child {
     margin-left: 0; }
   .button.primary {
@@ -1131,12 +1135,12 @@ header {
     -ms-overflow-style: none; }
     @media only screen and (max-width: 768px) {
       #main #user-text {
-        font-size: 46px;
-        line-height: 60px; } }
+        font-size: 42px;
+        line-height: 56px; } }
     @media only screen and (max-width: 480px) {
       #main #user-text {
-        font-size: 32px;
-        line-height: 46px; } }
+        font-size: 28px;
+        line-height: 42px; } }
     #main #user-text:focus {
       outline: none; }
   #main .subtitle {

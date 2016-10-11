@@ -60,7 +60,7 @@ a:visited {
     display: inline-block;
     margin-left: 10px;
     max-width: initial;
-    padding: 12px 16px 10px;
+    padding: 12px 16px 8px;
     margin-top: 0;
     background-color: transparent;
     font-weight: 300;
@@ -70,6 +70,10 @@ a:visited {
     border: 1px solid transparent;
     font-size: 18px;
     font-family: $font-stack;
+    @media only screen and (max-width: $phone-breakpoint) {
+        padding: 8px 12px 4px;
+        font-size: 16px;
+    }
     &:first-child {
         margin-left: 0;
     }
@@ -188,12 +192,12 @@ header {
         color: $text-color;
         -ms-overflow-style: none;
         @media only screen and (max-width: $tablet-portrait-breakpoint) {
-            font-size: 46px;
-            line-height: 60px;
+            font-size: 42px;
+            line-height: 56px;
         }
         @media only screen and (max-width: $phone-breakpoint) {
-            font-size: 32px;
-            line-height: 46px;
+            font-size: 28px;
+            line-height: 42px;
         }
         &:focus {
             outline: none;
