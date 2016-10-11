@@ -133,19 +133,20 @@ header {
     position: relative;
     z-index: 1;
     height: 100vh;
+    overflow: hidden;
     .background {
         font-family: $font-stack;
         color: white;
         display: block;
         position: absolute;
         top: 0;
-        right: -20vw;
+        right: 0;
         font-size: 40vw;
         line-height: 36vw;
         word-break: normal;
         opacity: 0.08;
         text-align: right;
-        letter-spacing: -2vw;
+        letter-spacing: -1vw;
         overflow: hidden;
         ::selection {
             background: transparent;
