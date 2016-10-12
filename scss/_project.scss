@@ -45,6 +45,15 @@ body {
     color: $text-color;
     &.fonts-loaded {
         font-family: $font-stack;
+        font-weight: normal;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
     }
 }
 a,
@@ -63,7 +72,7 @@ a:visited {
     padding: 12px 16px 8px;
     margin-top: 0;
     background-color: transparent;
-    font-weight: 300;
+    font-weight: normal;
     text-transform: none;
     text-decoration: none;
     color: white;
@@ -227,6 +236,9 @@ header {
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
+        @media only screen and (max-width: $phone-breakpoint) {
+            bottom: 10px;
+        }
         .fa {
             animation: bounce 2000ms infinite;
         }
@@ -244,7 +256,8 @@ header {
     @media only screen and (max-width: $phone-breakpoint) {
         padding: 80px 0;
     }
-    a, a:visited {
+    a,
+    a:visited {
         &:not(.button) {
             color: $color-secondary;
             text-decoration: underline;
