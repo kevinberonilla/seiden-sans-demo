@@ -205,8 +205,8 @@ header {
             line-height: 56px;
         }
         @media only screen and (max-width: $phone-breakpoint) {
-            font-size: 28px;
-            line-height: 42px;
+            font-size: 26px;
+            line-height: 40px;
         }
         &:focus {
             outline: none;
@@ -228,6 +228,11 @@ header {
             right: initial;
             margin-top: 16px;
             text-align: left;
+        }
+        .fa {
+            @media only screen and (max-width: $phone-breakpoint) {
+                display: none;
+            }
         }
     }
     .scroll-chevron {
@@ -278,6 +283,10 @@ header {
             line-height: 36px;
             text-align: left;
             margin-bottom: 42px;
+        }
+        @media only screen and (max-width: $phone-breakpoint) {
+            font-size: 28px;
+            line-height: 32px;
         }
         p {
             margin-top: 16px;
