@@ -1586,7 +1586,7 @@ header #kb-logo:focus {
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  color: white;
+  background-color: white;
   box-shadow: none;
 }
 
