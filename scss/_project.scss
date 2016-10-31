@@ -160,7 +160,7 @@ header {
         font-size: 40vw;
         line-height: 36vw;
         word-break: normal;
-        opacity: 0.08;
+        filter: opacity(8%);
         text-align: right;
         letter-spacing: -1vw;
         overflow: hidden;
@@ -221,10 +221,10 @@ header {
         &.bold {
             font-weight: 700;
         }
-        /*&.light {
+        &.light {
             font-weight: 300;
         }
-        &.italic {
+        /*&.italic {
             font-style: italic;
         }*/
     }
@@ -302,6 +302,7 @@ header {
     padding: 200px 0;
     position: relative;
     z-index: 9996;
+    font-weight: 300;
     @media only screen and (max-width: $tablet-portrait-breakpoint) {
         padding: 160px 0;
     }
@@ -327,6 +328,7 @@ header {
         line-height: 42px;
         text-align: right;
         font-family: $font-stack;
+        font-weight: 400;
         @media only screen and (max-width: $tablet-landscape-breakpoint) {
             font-size: 32px;
             line-height: 36px;
