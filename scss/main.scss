@@ -1,7 +1,10 @@
 /* ----------------------------------------
-Sass Modules
+Partials
 ---------------------------------------- */
-@import 'variables', 'lists', 'mixins';
+@import 'variables',
+    'lists',
+    'mixins',
+    'keyframes';
 
 /* ----------------------------------------
 Grid Styles

@@ -1,0 +1,43 @@
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-16px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes grow-2 {
+    0% {
+        transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    }
+    100% {
+        transform: scale(0.25) rotateZ(5deg) translateX(-8%) translateY(20%);
+    }
+}
+@keyframes grow-3 {
+    0% {
+        transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    }
+    100% {
+        transform: scale(1.5) rotateZ(12deg) translateX(20%) translateY(5%);
+    }
+}
+@keyframes grow-4 {
+    0% {
+        transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    }
+    100% {
+        transform: scale(0.75) rotateZ(45deg) translateX(10%) translateY(-2%);
+    }
+}
+@keyframes grow-5 {
+    0% {
+        transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
+    }
+    100% {
+        transform: scale(0.1) rotateZ(-30deg) translateX(-40%) translateY(8%);
+    }
+}
