@@ -1,35 +1,6 @@
 /* ----------------------------------------
 Partials
 ---------------------------------------- */
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(-16px);
-    transform: translateY(-16px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@keyframes bounce {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(-16px);
-    transform: translateY(-16px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
 @-webkit-keyframes grow-2 {
   0% {
     -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
@@ -40,7 +11,6 @@ Partials
     transform: scale(0.25) rotateZ(5deg) translateX(-8%) translateY(20%);
   }
 }
-
 @keyframes grow-2 {
   0% {
     -webkit-transform: scale(1) rotateZ(0deg) translateX(0) translateY(0);
@@ -115,6 +85,36 @@ Partials
   100% {
     -webkit-transform: scale(0.1) rotateZ(-30deg) translateX(-40%) translateY(8%);
     transform: scale(0.1) rotateZ(-30deg) translateX(-40%) translateY(8%);
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-16px);
+    transform: translateY(-16px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-16px);
+    transform: translateY(-16px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -1250,7 +1250,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Seiden Sans", sans-serif;
   font-size: 16px;
   line-height: 28px;
 }
@@ -1313,19 +1313,6 @@ Project Styles
 ---------------------------------------- */
 body {
   color: white;
-}
-
-body.fonts-loaded {
-  font-family: "Seiden Sans", sans-serif;
-  font-weight: 400;
-}
-
-body.fonts-loaded h1,
-body.fonts-loaded h2,
-body.fonts-loaded h3,
-body.fonts-loaded h4,
-body.fonts-loaded h5,
-body.fonts-loaded h6 {
   font-weight: 400;
 }
 

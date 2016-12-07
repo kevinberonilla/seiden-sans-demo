@@ -9,19 +9,6 @@ $(document).ready(function() {
         view = $('html, body');
     
     /* ----------------------------------------
-    Web Font Functions
-    ---------------------------------------- */
-    var documentFonts = document.fonts;
-    
-    if (typeof(documentFonts) !== 'undefined') {
-        documentFonts.ready.then(function() {
-            bodyObj.addClass('fonts-loaded');
-        });
-    } else {
-        bodyObj.addClass('fonts-loaded');
-    }
-    
-    /* ----------------------------------------
     User Text Functions
     ---------------------------------------- */
     var userText = $('#user-text'),
